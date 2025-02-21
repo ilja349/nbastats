@@ -1,0 +1,46 @@
+<div class="heading">
+    <h1>Search a player!</h1>
+   
+</div>
+
+<div class="higher-layer">
+    <input type="text" [(ngModel)]="playerId" id="player-selection" placeholder="Type player id">
+    <button (click)="getPlayer()">Search</button>
+</div>
+
+<div *ngIf="player" class="d-flex justify-content-center mt-5">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{player.first_name}} {{player.last_name}}</h5>
+          <p class="card-text">
+           position: {{player.position}}
+          </p>
+          <p class="card-text">
+            height: {{player.height}}
+          </p>
+          <p class="card-text">
+            weight: {{player.weight}}
+          </p>
+          <p class="card-text">
+            jersey number: {{player.jersey_number}}
+          </p>
+          <p class="card-text">
+            college: {{player.college}}
+          </p>
+          <p class="card-text">
+            country: {{player.country}}
+          </p>
+          <p class="card-text">
+            draft year: {{player.draft_year ?? "Not Available"}}
+          </p>
+          <p class="card-text">
+            draft round: {{player.draft_round ?? "Not Available"}}
+          </p>
+          <p class="card-text">
+            draft number: {{player.draft_number ?? "Not Available"}}
+          </p>
+
+        </div>
+      </div>
+</div>
+
